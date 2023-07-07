@@ -1,3 +1,5 @@
+'use client';
+
 import { PageHeader } from "@/components/layout/client/PageHeader";
 import LicenseStatusChartBox from "./(LicenseStatusChartBox)";
 import NextMaturitiesListBox from "./(NextMaturitiesListBox)";
@@ -6,7 +8,6 @@ import PendingInfosBox from "./(PendingInfosBox)";
 import UnitMap from "./(UnitMapBox)";
 
 export default function DashboardPage() {
-
     return (
         // TODO - Trocar select por "dktSelect"
         <>
