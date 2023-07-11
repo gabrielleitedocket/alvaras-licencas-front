@@ -1,3 +1,5 @@
+'use client';
+
 interface IFontSize {
     [key: string]: string
 }

@@ -1,3 +1,5 @@
+'use client';
+
 interface IColors {
     [key: string]: string
 }

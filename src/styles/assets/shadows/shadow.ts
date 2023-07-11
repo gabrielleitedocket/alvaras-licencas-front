@@ -1,3 +1,5 @@
+'use client';
+
 import { colors } from "../colors/colors";
 
 export const shadows = {

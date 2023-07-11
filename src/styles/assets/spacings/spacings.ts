@@ -1,3 +1,5 @@
+'use client';
+
 interface ISpacings {
     [key: string]: string
 }
