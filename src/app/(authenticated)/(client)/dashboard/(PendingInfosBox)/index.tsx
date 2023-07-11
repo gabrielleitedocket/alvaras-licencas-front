@@ -9,24 +9,27 @@ import {
 } from './styles';
 import { useEffect, useState } from "react";
 import { get } from "@/services/api";
+import useDashboardDataEndpoints from "@/services/api/client/dashboard-data";
 
 
 export default function PendingInfosBox() {
+    const { getPendingInfos } = useDashboardDataEndpoints();
+
     const [isLoadingData, setIsLoadingData] = useState(false);
     const [pendingCnpjs, setPendingCnpjs] = useState(0);
     const [pendingAccessories, setPendingAccessories] = useState(0);
 
     useEffect(() => {
-        getPendingInfos();
+        getPendingInfosData();
     }, []);
 
     /**
      * Realiza a requisição para obter dados de informações pendentes
      */
-    async function getPendingInfos() {
+    async function getPendingInfosData() {
         setIsLoadingData(true);
 
-        const response = await get('/infos-pendentes');
+        const response = await getPendingInfos();
 
         if(response) {
             const { cnpjsPendentes, acessoriosPendentes } = response;
@@ -70,7 +73,7 @@ export default function PendingInfosBox() {
     return (
         <Card>
             <PendingInfosBoxStyle>
-                <Column borderRight>
+                <Column borderright="true">
                     <h4>CNPJs pendentes</h4>
                     {renderPendingCnpjs()}
                     <Link href="#">Mostrar</Link>

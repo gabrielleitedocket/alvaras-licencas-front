@@ -1,3 +1,4 @@
+import { useSession } from '@/contexts/SessionContext';
 import {
     HeaderStyle,
     HeaderBreadcrumb,
@@ -8,6 +9,8 @@ import {
 } from './styles';
 
 export default function Header() {
+    const { userSessionData } = useSession();
+
     return (
         <HeaderStyle>
             <HeaderBreadcrumb>
@@ -31,7 +34,7 @@ export default function Header() {
 
                 <HeaderMenuButtonUser>
                     <AvatarExample />
-                    <h4>Gabriel Leite</h4>
+                    <h4>{ userSessionData.name }</h4>
                 </HeaderMenuButtonUser>
             </HeaderButtonsContainer>
         </HeaderStyle>

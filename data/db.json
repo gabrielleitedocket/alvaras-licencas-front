@@ -32,5 +32,18 @@
         { "statusNome": "Em obtenção", "statusQuantidade": 25, "statusCor": "#FFAF3E" },
         { "statusNome": "Vencida", "statusQuantidade": 10, "statusCor": "#E65562" },
         { "statusNome": "Protocolo vencido", "statusQuantidade": 3, "statusCor": "#E65562" }
-    ]
+    ],
+    "login": {
+        "clientData": {
+            "id": 1,
+            "url": "docket-ti",
+            "name": "Docket Brasil"
+        },
+        "userData": {
+            "id": 1,
+            "name": "Gabriel Leite",
+            "email": "gabriel.leite@docket.com.br",
+            "totken": ""
+        }
+    }
 }

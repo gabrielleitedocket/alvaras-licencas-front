@@ -5,7 +5,7 @@ import Loading from "@/components/data-display/Loading";
 import { LicencesBoxContainer } from "./styles";
 import { Chart } from 'react-google-charts';
 import { useEffect, useState } from "react";
-import { get } from "@/services/api";
+import useDashboardDataEndpoints from "@/services/api/client/dashboard-data";
 
 interface ILicenseStatus {
     statusNome: string;
@@ -14,11 +14,13 @@ interface ILicenseStatus {
 }
 
 export default function LicenseStatusChartBox() {
+    const { getLicenseStatus } = useDashboardDataEndpoints();
+
     const [isLoadingData, setIsLoadingData] = useState(false);
     const [chartData, setChartData] = useState([] as any[]);
 
     useEffect(() => {
-        getLicenseStatus();
+        getLicenseData();
     }, []);
 
     /**
@@ -45,10 +47,10 @@ export default function LicenseStatusChartBox() {
     /**
      * Realiza a requisição para obter dados dos status das licenças.
      */
-    async function getLicenseStatus() {
+    async function getLicenseData() {
         setIsLoadingData(true);
 
-        const response = await get('/status-licencas');
+        const response = await getLicenseStatus();
 
         if(response) {
             defineChartData(response);

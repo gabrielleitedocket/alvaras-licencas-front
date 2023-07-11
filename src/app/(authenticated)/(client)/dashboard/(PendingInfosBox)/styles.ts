@@ -4,7 +4,7 @@ import { fontSizes, fontWeights } from "@/styles/assets/typography/sizes";
 import { styled } from "styled-components";
 
 interface IColumProps {
-    borderRight?: boolean;
+    borderright?: string;
 }
 
 export const PendingInfosBoxStyle = styled.div`
@@ -21,7 +21,7 @@ export const Column = styled.div<IColumProps>`
     flex-direction: column;
     gap: ${spacings.spacing4};
     width: 50%;
-    border-right: ${props => props.borderRight ? `1px solid ${colors.black20}` : 'none'};
+    border-right: ${props => props.borderright === 'true' ? `1px solid ${colors.black20}` : 'none'};
 
     span {
         font-size: ${fontSizes.sizeJumbo};

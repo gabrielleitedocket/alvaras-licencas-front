@@ -11,9 +11,11 @@ import {
 } from './styles';
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useSession } from "@/contexts/SessionContext";
 
 export default function Sidenav() {
     const pathName = usePathname();
+    const { clientSessionData } = useSession();
 
     function checkItemRefersToCurrentPage(itemName: string) {
         return pathName.includes(itemName).toString();
@@ -38,7 +40,7 @@ export default function Sidenav() {
                     />
                 </SidenavClientLogo>
 
-                <h3>Cliente Nome</h3>
+                <h3>{ clientSessionData.name }</h3>
             </SidenavClient>
 
             <SidenavLinks>

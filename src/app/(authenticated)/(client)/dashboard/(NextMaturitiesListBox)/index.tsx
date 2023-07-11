@@ -4,10 +4,10 @@ import Card from "@/components/data-display/Card";
 import Loading from "@/components/data-display/Loading";
 import Link from "next/link";
 import { ListContainer, MaturitiesListStyle } from "./styles";
-import { ReactComponentElement, useEffect, useState } from "react";
-import { get } from "@/services/api";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import IconCalendar from '@/../public/images/icons/ico-calendar.svg';
+import useDashboardDataEndpoints from "@/services/api/client/dashboard-data";
 
 interface INextMaturity {
     dataFormatada: string;
@@ -16,20 +16,22 @@ interface INextMaturity {
 }
 
 export default function NextMaturitiesListBox() {
+    const { getNextMaturities } = useDashboardDataEndpoints();
+
     const [isLoadingData, setLoadingData] = useState(false);
     const [nextMaturities, setNextMaturities] = useState([] as INextMaturity[]);
 
     useEffect(() => {
-        getNextMaturities();
+        getNextMaturitiesData();
     }, []);
 
     /**
      * Realiza a requisição para obter dados dos próximos vencimentos.
      */
-    async function getNextMaturities() {
+    async function getNextMaturitiesData() {
         setLoadingData(true);
 
-        const response = await get('/proximos-vencimentos');
+        const response = await getNextMaturities();
         
         if(response)
             setNextMaturities(response);

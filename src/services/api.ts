@@ -21,7 +21,7 @@ async function handleErrorResponse(responseStatus: number) {
 
 async function handleSuccessResponse(response: any) {
     if(response && response.data) {
-        if(response.status === 200)
+        if(response.status === 200 || response.status === 201)
             return response.data;
         else
             return handleErrorResponse(response.status);
