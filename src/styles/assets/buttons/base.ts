@@ -3,6 +3,7 @@
 import { spacings } from "../spacings/spacings";
 import { fontSizes, fontWeights } from "../typography/sizes";
 import { colors } from "../colors/colors";
+import { shadows } from "../shadows/shadow";
 
 export const buttonBaseStyle = `
     border-radius: 18px;
@@ -48,4 +49,24 @@ export const raisedButtonBaseStyle = `
     ${buttonBaseStyle};
     border: none;
     color: ${colors.white};
+`;
+
+export const outlineButtonBaseStyle = `
+    ${buttonBaseStyle};
+    border: 1px solid ${colors.black100};
+    background-color: transparent;
+`;
+
+export const circleButtonBaseStyle = `
+    ${buttonBaseStyle};
+    border-radius: 50%;
+    height: ${spacings.spacing6};
+    width: ${spacings.spacing6};
+    border: 1px solid ${colors.black100};
+    background-color: transparent;
+    padding: 0;
+
+    &:hover {
+        ${shadows.shadowGroundFloor};
+    }
 `;

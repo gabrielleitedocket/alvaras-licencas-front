@@ -1,5 +1,17 @@
+'use client';
+
+import { PageHeader } from "@/components/layout/client/PageHeader";
+import { InboxContainerStyle } from "./page.styled";
+import MessageList from "./(MessageList)";
+
 export default function CaixaEntradaPage() {
     return (
-        <h1>Caixa de entrada</h1>
+        <>
+            <PageHeader title="Entrada" />
+
+            <InboxContainerStyle>
+                <MessageList />
+            </InboxContainerStyle>
+        </>
     );
 }

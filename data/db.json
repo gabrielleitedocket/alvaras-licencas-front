@@ -1,49 +1,91 @@
 {
-    "proximos-vencimentos": [
-        {
-            "dataFormatada": "03 de agosto de 2023",
-            "nomeLicenca": "Auto de Vistoria do Corpo de Bombeiros",
-            "nomeUnidade": "B&M SOLUCOES EM ALIMENTDOS LTDA"
-        },
-        {
-            "dataFormatada": "14 de agosto de 2023",
-            "nomeLicenca": "Auto de Licença de Funcionamento",
-            "nomeUnidade": "MAIS SOLUCOES INDUSTRIAIS S.A"
-        },
-        {
-            "dataFormatada": "15 de agosto de 2023",
-            "nomeLicenca": "Auto de Licença de Funcionamento",
-            "nomeUnidade": "MAIS SOLUCOES INDUSTRIAIS S.A FILIAL"
-        },
-        {
-            "dataFormatada": "16 de agosto de 2023",
-            "nomeLicenca": "Auto de Licença de Funcionamento",
-            "nomeUnidade": "BIOTECH LOGISTICA LTDA FILIAL"
-        }
-    ],
-    "infos-pendentes": {
-        "cnpjsPendentes": 3,
-        "acessoriosPendentes": 2
+  "proximos-vencimentos": [
+    {
+      "dataFormatada": "03 de agosto de 2023",
+      "nomeLicenca": "Auto de Vistoria do Corpo de Bombeiros",
+      "nomeUnidade": "B&M SOLUCOES EM ALIMENTDOS LTDA"
     },
-    "status-licencas": [
-        { "statusNome": "Não configurada", "statusQuantidade": 290, "statusCor": "#66ABFF" },
-        { "statusNome": "Vigente", "statusQuantidade": 200, "statusCor": "#00B98E" },
-        { "statusNome": "Dispensada", "statusQuantidade": 50, "statusCor": "#C4C8CC" },
-        { "statusNome": "Em obtenção", "statusQuantidade": 25, "statusCor": "#FFAF3E" },
-        { "statusNome": "Vencida", "statusQuantidade": 10, "statusCor": "#E65562" },
-        { "statusNome": "Protocolo vencido", "statusQuantidade": 3, "statusCor": "#E65562" }
-    ],
-    "login": {
-        "clientData": {
-            "id": 1,
-            "url": "docket-ti",
-            "name": "Docket Brasil"
-        },
-        "userData": {
-            "id": 1,
-            "name": "Gabriel Leite",
-            "email": "gabriel.leite@docket.com.br",
-            "totken": ""
-        }
+    {
+      "dataFormatada": "14 de agosto de 2023",
+      "nomeLicenca": "Auto de Licença de Funcionamento",
+      "nomeUnidade": "MAIS SOLUCOES INDUSTRIAIS S.A"
+    },
+    {
+      "dataFormatada": "15 de agosto de 2023",
+      "nomeLicenca": "Auto de Licença de Funcionamento",
+      "nomeUnidade": "MAIS SOLUCOES INDUSTRIAIS S.A FILIAL"
+    },
+    {
+      "dataFormatada": "16 de agosto de 2023",
+      "nomeLicenca": "Auto de Licença de Funcionamento",
+      "nomeUnidade": "BIOTECH LOGISTICA LTDA FILIAL"
     }
+  ],
+  "infos-pendentes": {
+    "cnpjsPendentes": 3,
+    "acessoriosPendentes": 2
+  },
+  "status-licencas": [
+    {
+      "statusNome": "Não configurada",
+      "statusQuantidade": 290,
+      "statusCor": "#66ABFF"
+    },
+    {
+      "statusNome": "Vigente",
+      "statusQuantidade": 200,
+      "statusCor": "#00B98E"
+    },
+    {
+      "statusNome": "Dispensada",
+      "statusQuantidade": 50,
+      "statusCor": "#C4C8CC"
+    },
+    {
+      "statusNome": "Em obtenção",
+      "statusQuantidade": 25,
+      "statusCor": "#FFAF3E"
+    },
+    {
+      "statusNome": "Vencida",
+      "statusQuantidade": 10,
+      "statusCor": "#E65562"
+    },
+    {
+      "statusNome": "Protocolo vencido",
+      "statusQuantidade": 3,
+      "statusCor": "#E65562"
+    }
+  ],
+  "mensagens": [
+    {
+      "title": "Alvará de Autorização para Eventos Públicos e Temporários",
+      "subtitle": "Unidade Leste",
+      "isNew": false,
+      "text": "Sua atualização foi reprovada por Master",
+      "sentDate": "24/07/2023, às 11:07",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "title": "Alvará de Autorização para Eventos Públicos e Temporários",
+      "subtitle": "Unidade Leste",
+      "isNew": true,
+      "text": "Sua atualização foi reprovada por Master",
+      "sentDate": "24/07/2023, às 11:07"
+    }
+  ],
+  "login": {
+    "clientData": {
+      "id": 1,
+      "url": "docket-ti",
+      "name": "Docket Brasil"
+    },
+    "userData": {
+      "id": 1,
+      "name": "Gabriel Leite",
+      "email": "gabriel.leite@docket.com.br",
+      "totken": ""
+    }
+  }
 }

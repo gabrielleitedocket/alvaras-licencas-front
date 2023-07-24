@@ -52,9 +52,8 @@ export default function LicenseStatusChartBox() {
 
         const response = await getLicenseStatus();
 
-        if(response) {
+        if(response)
             defineChartData(response);
-        }
 
         setIsLoadingData(false);
     }
